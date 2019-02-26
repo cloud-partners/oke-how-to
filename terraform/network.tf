@@ -1,7 +1,3 @@
-data "oci_identity_availability_domains" "availability_domains" {
-  compartment_id = "${var.compartment_ocid}"
-}
-
 resource "oci_core_virtual_network" "virtual_network" {
   display_name   = "vcn"
   cidr_block     = "10.0.0.0/16"
