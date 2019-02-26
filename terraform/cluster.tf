@@ -45,6 +45,5 @@ output "node_pool" {
     id                 = "${oci_containerengine_node_pool.node_pool.id}"
     kubernetes_version = "${oci_containerengine_node_pool.node_pool.kubernetes_version}"
     name               = "${oci_containerengine_node_pool.node_pool.name}"
-    subnet_ids         = "${oci_containerengine_node_pool.node_pool.subnet_ids}"
   }
 }
