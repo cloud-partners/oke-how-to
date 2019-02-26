@@ -23,7 +23,7 @@ resource "oci_containerengine_cluster" "cluster" {
 resource "oci_containerengine_node_pool" "node_pool" {
   cluster_id          = "${oci_containerengine_cluster.cluster.id}"
   compartment_id      = "${var.compartment_ocid}"
-  kubernetes_version  = "${data.oci_containerengine_node_pool_option.node_pool_option.kubernetes_versions.0}"
+  kubernetes_version  = "${data.oci_containerengine_node_pool_option.node_pool_option.kubernetes_versions.1}"
   name                = "${var.oke["name"]}"
   node_image_name     = "Oracle-Linux-7.5"
   node_shape          = "${var.oke["shape"]}"
